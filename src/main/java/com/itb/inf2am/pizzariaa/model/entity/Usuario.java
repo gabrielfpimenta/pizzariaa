@@ -1,17 +1,33 @@
 package com.itb.inf2am.pizzariaa.model.entity;
 
-public class Usuario {
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Usuario")
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 45, nullable = true)
     private String nome;
+    @Column(length = 15, nullable = true)
     private String cpf;
+    @Column(length = 45, nullable = false)
     private String email;
+    @Column(length = 255, nullable = false)
     private String senha;
+    @Column(length = 20, nullable = true)
     private String logradouro;
+    @Column(length = 10, nullable = true)
     private String sexo;
+    @Column(length = 45, nullable = true)
     private String cep;
+    @Column(length = 45, nullable = true)
     private String bairro;
+    @Column(length = 45, nullable = true)
     private String cidade;
+    @Column(length = 45, nullable = true)
     private String uf;
     private boolean codStatus;
 
