@@ -1,13 +1,26 @@
 package com.itb.inf2am.pizzariaa.model.entity;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Produto") // facultativo quando o nome da tabela for igual ao nome da classe
+
 public class Produto {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-Incremento, ou seja, incremento de 1 em 1
     private Long id;
+    @Column(length = 45, nullable = false)
     private String nome;
+    @Column(length = 45, nullable = true)
     private String tipo;
+    @Column(length = 255, nullable = true)
     private String descricao;
+    @Column(columnDefinition = "DECIMAL(5,2))", nullable = true)
     private Double valor_compra;
+    @Column(columnDefinition = "DECIMAL(5,2))", nullable = true)
     private Double valor_venda;
+    @Column(nullable = true)
     private int quantdade_estoque;
     private boolean cod_status;
 
