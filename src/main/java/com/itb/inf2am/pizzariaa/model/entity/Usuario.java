@@ -13,7 +13,9 @@ public class Usuario {
     private String nome;
     @Column(length = 15, nullable = true)
     private String cpf;
-    @Column(length = 45, nullable = false)
+    @Column(length = 20, nullable = false)
+    private String tipoUsuario;
+    @Column(length = 45, nullable = true)
     private String email;
     @Column(length = 255, nullable = false)
     private String senha;
@@ -53,6 +55,15 @@ public class Usuario {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+
+    public String getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 
     public String getEmail() {
