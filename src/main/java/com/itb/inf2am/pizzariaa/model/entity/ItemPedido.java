@@ -9,10 +9,13 @@ public class ItemPedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private int quantidadeItem;
+
     @Column(columnDefinition = "DECIMAL(5,2)", nullable = false)
     private double valorUnitario;
+
     private boolean codStatus;
 
     public Long getId() {
