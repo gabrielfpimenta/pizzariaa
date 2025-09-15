@@ -21,7 +21,7 @@ public class Produto {
     @Column(columnDefinition = "DECIMAL(5,2))", nullable = true)
     private Double valor_venda;
     @Column(nullable = true)
-    private int quantdade_estoque;
+    private int quantidade_estoque;
     private boolean cod_status;
 
     public Long getId() {
@@ -72,12 +72,12 @@ public class Produto {
         this.valor_venda = valor_venda;
     }
 
-    public int getQuantdade_estoque() {
-        return quantdade_estoque;
+    public int getQuantidade_estoque() {
+        return quantidade_estoque;
     }
 
-    public void setQuantdade_estoque(int quantdade_estoque) {
-        this.quantdade_estoque = quantdade_estoque;
+    public void setQuantidade_estoque(int quantidade_estoque) {
+        this.quantidade_estoque = quantidade_estoque;
     }
 
     public boolean isCod_status() {
