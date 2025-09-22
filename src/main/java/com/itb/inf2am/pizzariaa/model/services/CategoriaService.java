@@ -12,7 +12,7 @@ import java.util.List;
 public class CategoriaService {
 
     @Autowired       // Injeção de dependência
-    private CategoriaRepository categoriaRepository;
+    private t aCategoriaRepository categoriaRepository;
 
     // Método responsável em listar todos os produtos cadastrados no banco de dados
 
